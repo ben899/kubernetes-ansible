@@ -99,8 +99,8 @@ class KubeManager(object):
         self.base_cmd = [module.get_bin_path('kubectl', True)]
         self.api_version = module.params.get('api_version')
 
-        if self.api_version:
-            self.base_cmd.append('--api-version=' + self.api_version)
+#        if self.api_version:
+#            self.base_cmd.append('--api-version=' + self.api_version)
 
         if module.params.get('server'):
             self.base_cmd.append('--server=' + module.params.get('server'))
