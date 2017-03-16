@@ -13,5 +13,7 @@ spec:
     - proxy
     - --master=http://127.0.0.1:8080
     - --v={{kube_log_level}}
+    - --proxy-port-range={{ proxy_port_range }}
+    - --proxy-mode={{ proxy_mode }}
     securityContext:
       privileged: true

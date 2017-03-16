@@ -16,6 +16,8 @@ spec:
     - --master=https://{{ groups['master'][0] }}:{{ kube_master_port }}
     - --kubeconfig={{ kube_config_dir }}/node.kubeconfig
     - --v={{kube_log_level}}
+    - --proxy-port-range={{ proxy_port_range }}
+    - --proxy-mode={{ proxy_mode }}
     securityContext:
       privileged: true
     volumeMounts:

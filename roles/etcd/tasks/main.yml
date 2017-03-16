@@ -1,4 +1,6 @@
 ---
+- name: debug line
+  debug: msg="{{inventory_hostname}} "
 - name: Install etcd package
   sudo: yes
   yum:

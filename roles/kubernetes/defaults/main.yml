@@ -56,3 +56,6 @@ os_username: "{{ lookup('env','OS_USERNAME') }}"
 os_password: "{{ lookup('env','OS_PASSWORD') }}"
 os_region_name: "{{ lookup('env','OS_REGION_NAME') }}"
 os_tenant_id: "{{ lookup('env','OS_TENANT_ID') }}"
+proxy_mode: userspace
+proxy_port_range: 30000-40000
+

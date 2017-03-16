@@ -350,4 +350,3 @@ When using `FORMAT=json` (default) the output will contain tests *summary* only 
 
         sudo iptables -t nat -L -n -v
 
-=================

@@ -32,6 +32,17 @@
     - addons
     - monitoring
 
+#- name: Monitoring | Heapster | Write controller file
+#  sudo: yes
+#  copy:
+#    src: heapster-controller.yaml
+#    dest: "{{ kube_manifest_dir }}/heapster-controller.yaml"
+#  register: heapster_rc_def
+#  when: enable_monitoring
+#  tags:
+#    - addons
+#    - monitoring
+
 - name: Monitoring | Heapster | Write controller file
   sudo: yes
   copy:

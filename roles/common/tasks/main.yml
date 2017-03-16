@@ -1,4 +1,11 @@
 ---
+- name: certs | clean up temp directory for certs syncing
+  local_action: file path=".syncdir-{{ groups['master'][0] }}" state=absent
+  run_once: true
+  ignore_errors: true
+  tags:
+    - secrets
+
 # default is etc/utc in build 20141129 [http://cloud.centos.org/centos/7/images/]
 - name: set timezone to etc/utc
   sudo: yes

@@ -1,6 +1,7 @@
 - name: clean yum
   sudo: yes
   command: yum clean all
+  when: skipyuminstalls is defined and skipyuminstalls == false
   tags:
     - common
 
